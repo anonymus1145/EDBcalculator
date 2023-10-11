@@ -5,18 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/script.js"></script>
     <title>EBDcalculator</title>
 </head>
 
 <body>
-    <h1>EBD Calculator</h1>
+    <h1>Calculator</h1>
+    <p>"Let the math begin" - Albert Einstein</p>
+    <main class="main">
+        <div class="calculator">
+            <div class="screen">
+                <div class="result" id="nextResult"></div>
+                <div class="result-current" id="currentResult">0</div>
+            </div>
+            <div class="buttons-grid">
+                <button class="btn btn-black span-2" id="backspaceBtn" onclick="">
+                    UNDO
+                </button>
+                <button class="btn btn-red span-2" id="clearBtn" onclick="">
+                    CLEAR
+                </button>
+                <button class="btn btn-blue span-2" id="deleteBtn" onclick="">
+                    DELETE
+                </button>
+            </div>
+            <div class="buttons-grid">
+                <button class="btn" onclick="handleButtonClick(7)">7</button>
+                <button class="btn" onclick="handleButtonClick(8)">8</button>
+                <button class="btn" onclick="handleButtonClick(9)">9</button>
+                <button class="btn" onclick="handleOperatorClick('/')">/</button>
 
-    <div class="container">
-        <div class="result"></div>
-        <div class="clear"></div>
-        <div class="delete"></div>
-    </div>
+                <button class="btn" onclick="handleButtonClick(4)">4</button>
+                <button class="btn" onclick="handleButtonClick(5)">5</button>
+                <button class="btn" onclick="handleButtonClick(6)">6</button>
+                <button class="btn" onclick="handleOperatorClick('*')">*</button>
+
+                <button class="btn" onclick="handleButtonClick(1)">1</button>
+                <button class="btn" onclick="handleButtonClick(2)">2</button>
+                <button class="btn" onclick="handleButtonClick(3)">3</button>
+                <button class="btn" onclick="handleOperatorClick('-')">−</button>
+
+                <button class="btn" onclick="handleButtonClick('.')">.</button>
+                <button class="btn" onclick="handleButtonClick(0)">0</button>
+                <button class="btn" onclick="handleEqualClick()">=</button>
+                <button class="btn" onclick="handleOperatorClick('+')">+</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            Anonymus1145
+        </p>
+        <a href="https://github.com/anonymus1145">
+            <i class="fa fa-github" style="font-size:36px"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/daniel-besliu-440ab413a/">
+            <i class="fa fa-linkedin-square" style="font-size:36px"></i>
+        </a>
+    </footer>
 </body>
 
 </html>
